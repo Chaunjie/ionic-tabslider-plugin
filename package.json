@@ -1,0 +1,23 @@
+{
+  "name": "ionic-tabslider-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serve.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xudao520/ionic-tabslider-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xudao520/ionic-tabslider-plugin/issues"
+  },
+  "homepage": "https://github.com/xudao520/ionic-tabslider-plugin#readme"
+}
