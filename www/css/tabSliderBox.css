@@ -1,0 +1,69 @@
+
+.tabbed-slidebox .slider {
+    height: 100%;
+}
+.tabbed-slidebox.btm .slider {
+    margin-bottom: -50px;
+}
+.tabbed-slidebox .slider-slides {
+    width: 100%;
+}
+
+.tabbed-slidebox .slider-slide {
+    padding-top: 0px;
+    color: #000;
+    text-align: center;
+    font-weight: 300;
+    background-color: #fff;
+}
+
+.tabbed-slidebox .tsb-icons {
+    text-align: center;
+    /*margin: 10px 0;*/
+    height:40px;
+    padding:10px 0 0 0;
+    position: relative;
+    background-color:#fff;
+}
+.tabbed-slidebox .tsb-ic-wrp {
+    display: flex;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s; !* For Safari 3.1 to 6.0 *!
+    -webkit-transform:translate3d(0,0,0);
+}
+
+.tabbed-slidebox .tabbed-slidebox {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.tsb-hscroll.scroll-view{
+    white-space: nowrap;
+    margin:0 auto;
+}
+.tsb-hscroll.scroll-view .scroll-bar{
+    visibility:hidden;
+}
+.tsb-hscroll.scroll-view .scroll.onscroll{
+    -webkit-transition: -webkit-transform 0.3s; !* For Safari 3.1 to 6.0 *!
+}
+
+.tabbed-slidebox .tsb-icons .scroll a{
+    width:60px;
+    font-size: 1em;
+    text-decoration: none;
+    margin: 0 15px;
+    border-bottom: 3px solid transparent;
+    line-height: 28px;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.3);
+}
+.tabbed-slidebox .tsb-icons .scroll a.active {
+    font-size: 1em;
+    border-bottom: 1px solid gold;
+    line-height:28px;
+    color: gold;
+    /* -webkit-transform:translate3d(0,0,0);*/
+}

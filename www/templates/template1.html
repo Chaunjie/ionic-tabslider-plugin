@@ -1,0 +1,14 @@
+<ion-view view-title="关于 美否" ng-controller="TestCtrl">
+    <ion-content class="">
+        <ion-refresher
+                pulling-text="正在刷新中..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <div style="height:700px;background:orange;"></div>
+        <ion-infinite-scroll
+                ng-if="true"
+                on-infinite="nextPage()"
+                distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

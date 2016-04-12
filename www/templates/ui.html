@@ -1,0 +1,152 @@
+<ion-view view-title="首页">
+    <ion-header-bar class="bar bar-positive meifou-background">
+        <div class="title box-center" ng-click="go('search')">
+            <div class="search-container white-background" style="height:26px;margin-top:9px;">
+                <i class="icon ion-ios-search font-16" style="color: #8E8C8C;position: absolute;left:5px;top:0;"></i>
+                <span class="font-14" style="color: #8E8C8C;position: absolute;left:25px;top:0;">搜索你感兴趣的内容</span>
+            </div>
+        </div>
+    </ion-header-bar>
+    <!--<ion-scroll direction="x" scrollbar-x="true" delegate-handle="rootTagsScroll" overflow-scroll="false"
+                style="height:40px;width:100%;position: absolute;top:45px;">
+        <div class="swiper-container" ng-style="swiperStyle">
+            <div class="rootTags align-center" ng-style="rootTagsStyle" ng-repeat="s in rootTags" ng-class="{'active': activeIndex === $index}" ng-click="initActiveIndex($index)">{{s.title}}</div>
+        </div>
+    </ion-scroll>
+    <ion-content scroll="true" overflow-scroll="false" style="top:85px;">
+        <ion-refresher
+                pulling-text="正在刷新中..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+        <ion-slides options="options" class="" ng-style="autoHeight" slider="slider">
+            <ion-slide-page ng-repeat="s in rootTags" class="padding-60 ">
+                <div class="list white-background" style="padding:0 0px 0 10px;">
+                    <div class="item" style="padding:10px 0 10px 0;border-left: none;border-right: none;"
+                         ng-repeat="r in childTags[s.id]" ng-click="go('topic-detail',{id:r.id})">
+                        <img err-src="img/placeholder.png" image-lazy-src="{{r.pic}}" class="sp-head-img circle">
+
+                        <div class="item no-padding no-border"
+                             style="position: absolute;left:70px;right:60px;top:15px;">
+                            <p class="font-16">{{r.title}}</p>
+
+                            <div class="font-14 font-grayMeiyan font-black" style="margin-top:15px;">
+                                {{r.relation_number}}<span
+                                    style="margin-right:10px;">咨询</span> {{r.subscriptions}}订阅
+                            </div>
+                        </div>
+
+                        <div class="btns-group">
+                            <div class="font-10 align-center meifou-btn round-corner-3 meifou-submit-btn"
+                                 ng-if="!r.follow" ng-click="followSubscript(r, true, $event)">订阅
+                            </div>
+                            <div class="font-10 align-center meifou-btn round-corner-3 meifou-cancle-btn"
+                                 ng-if="r.follow" ng-click="followSubscript(r, false, $event)">已订阅
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-slide-page>
+        </ion-slides>
+
+        <ion-infinite-scroll
+                ng-if="false"
+                on-infinite="nextPage()"
+                distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>-->
+    <ion-content scroll="false" >
+        <tab-slide-box class="email_tabs tabbed-slidebox" tab="0">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp  email-type">
+                    <ion-scroll direction="x" class="tsb-hscroll" scrollbar-x="false">
+                        <a href="javascript:;" class="active" >
+                            收件箱
+                        </a>
+                        <a href="javascript:;" >
+                            发件箱
+                        </a>
+                        <a href="javascript:;" >
+                            草稿箱
+                        </a>
+                        <a href="javascript:;" >
+                            垃圾箱
+                        </a>
+                        <a href="javascript:;" >
+                            移动箱
+                        </a>
+                    </ion-scroll>
+                </div>
+            </div>
+
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide>
+                    <ng-include src=' "templates/InMailbox.html" ' ></ng-include>
+                </ion-slide>
+
+                <ion-slide>
+                    <ng-include src=' "templates/OutMailbox.html" ' ></ng-include>
+                </ion-slide>
+
+                <ion-slide>
+                    <ng-include src=' "templates/draftbox.html" ' ></ng-include>
+                </ion-slide>
+
+                <ion-slide>
+                    <ng-include src=' "templates/Trashbox.html" ' ></ng-include>
+                </ion-slide>
+                <ion-slide>
+                    <ng-include src=' "templates/Trashbox.html" ' ></ng-include>
+                </ion-slide>
+            </ion-slide-box>
+        </tab-slide-box>
+    </ion-content>
+</ion-view>
+<style type="text/css">
+    /*.sp-head-img {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .btns-group {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+
+    .meifou-btn {
+        padding: 0 5px;
+        color: #fff;
+    }
+
+    .meifou-submit-btn {
+        background: #2fb9c3;
+    }
+
+    .meifou-cancle-btn {
+        background: #ccc;
+    }
+
+    .dinyue-topic {
+        float: left;
+    }
+
+    .tip-msg {
+        position: absolute;
+        bottom: -3px;
+    }
+
+    .rootTags {
+        color: #333;
+        float: left;
+        line-height:39px;
+    }
+    .rootTags.active{
+        color:#2fb9c3;
+        border-bottom:1px solid #2fb9c3;
+    }
+
+    ion-scroll .scroll {
+        width: 100%;
+        height: 100%;
+    }*/
+</style>
