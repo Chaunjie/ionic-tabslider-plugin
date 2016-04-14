@@ -28,6 +28,14 @@ angular.module('starter.controllers', [])
             ];
         })
 
+        $scope.includePages = ['templates/template1.html',
+            'templates/template2.html',
+            'templates/template3.html',
+            'templates/template4.html',
+            'templates/template5.html'];
+
+        $scope.title= '666';
+
     }])
 
     .controller('AccountCtrl', ['$scope', function ($scope) {

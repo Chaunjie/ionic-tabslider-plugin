@@ -1,29 +1,17 @@
 <ion-view view-title="测试">
     <ion-content class="slide-page">
-        <slider-tabs tabs="2" emitName="testTags" repeatData="message">
-            <ion-scroll direction="x" scrollbar-x="false" delegate-handle="rootTagsScroll" overflow-scroll="false"
-                        style="height:40px;width:100%;" >
+        <slider-tabs tabs="3" emitName="testTags" repeatData="message">
+            <ion-scroll direction="x" scrollbar-x="false" delegate-handle="rootTagsScroll1" overflow-scroll="false"
+                        style="height:40px;width:100%;overflow-x:hidden;" >
                 <div class="root-tags-container" ng-style="containerStyle">
                     <div class="tag" on-finish-render="testTags" ng-repeat="s in message" ng-class="{'active': activeIndex === $index}"
                          on-tap="initActiveIndex($index)">{{s.name}}
                     </div>
                 </div>
             </ion-scroll>
-            <ion-slides  options="options"  slider="slider">
-                <ion-slide-page style="">
-                    <ng-include src=' "templates/template1.html" '></ng-include>
-                </ion-slide-page>
-                <ion-slide-page style="">
-                    <ng-include src=' "templates/template2.html" '></ng-include>
-                </ion-slide-page>
-                <ion-slide-page style="">
-                    <ng-include src=' "templates/template3.html" '></ng-include>
-                </ion-slide-page>
-                <ion-slide-page style="">
-                    <ng-include src=' "templates/template4.html" '></ng-include>
-                </ion-slide-page>
-                <ion-slide-page style="">
-                    <ng-include src=' "templates/template5.html" '></ng-include>
+            <ion-slides  options="options" slider="slider">
+                <ion-slide-page style="" ng-repeat="p in includePages">
+                    <ng-include src='p' title="{{title}}" ></ng-include>
                 </ion-slide-page>
             </ion-slides>
         </slider-tabs>

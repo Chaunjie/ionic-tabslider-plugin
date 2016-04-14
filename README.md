@@ -7,6 +7,7 @@
     cd ionic-tabslider-plugin;
     npm install;
     gulp serve(you can also use node serve task);
+    (Don't ask me why it's 1024 port, because it's my birthday).
 
 ### Options
 1. for different versions of slider of ionic.
@@ -33,3 +34,4 @@
 4. tabsContainer
 
         The root-tags-container container must have to bind a style value that is containerStyle to the flex layout
+

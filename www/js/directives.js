@@ -11,7 +11,7 @@ angular.module('starter.directives', [])
                 $timeout(function(){
                     tabs = $scope.tabs ? $scope.tabs : 4;
                 });
-                
+
                 $scope.$on(emitName, function() {
                     var flexWidth = Math.floor(document.body.clientWidth * $scope[$attrs.repeatdata].length / tabs), slider;
                     $scope.containerStyle = {width: flexWidth + 'px'};
@@ -78,4 +78,5 @@ angular.module('starter.directives', [])
             }
         }
     })
+
 ;
