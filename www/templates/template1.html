@@ -4,7 +4,7 @@
                 pulling-text="正在刷新中..."
                 on-refresh="doRefresh()">
         </ion-refresher>
-        <div style="height:700px;background:orange;" ></div>
+        <div style="height:100px;border-bottom:1px solid #ccc;background:orange;" ng-repeat="s in [0,1,2,3,4,5,6,7]">{{$index}}</div>
         <ion-infinite-scroll
                 ng-if="true"
                 on-infinite="nextPage()"

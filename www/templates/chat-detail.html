@@ -1,15 +1,15 @@
 <ion-view view-title="测试">
     <ion-content class="slide-page">
-        <slider-tabs>
+        <slider-tabs tabs="2" emitName="testTags" repeatData="message">
             <ion-scroll direction="x" scrollbar-x="false" delegate-handle="rootTagsScroll" overflow-scroll="false"
-                        style="height:40px;width:100%;">
+                        style="height:40px;width:100%;" >
                 <div class="root-tags-container" ng-style="containerStyle">
-                    <div class="tag" slider-tabs  ng-repeat="s in message" ng-class="{'active': activeIndex === $index}"
+                    <div class="tag" on-finish-render="testTags" ng-repeat="s in message" ng-class="{'active': activeIndex === $index}"
                          on-tap="initActiveIndex($index)">{{s.name}}
                     </div>
                 </div>
             </ion-scroll>
-            <ion-slides options="options" class="" ng-style="autoHeight" slider="slider">
+            <ion-slides  options="options"  slider="slider">
                 <ion-slide-page style="">
                     <ng-include src=' "templates/template1.html" '></ng-include>
                 </ion-slide-page>
